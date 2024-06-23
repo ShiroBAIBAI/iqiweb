@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30秒让你理解所有马来西亚的房地产项目</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="source/iqi-logo.jpg" alt="IQI Global">
+        <h1>30秒让你理解所有马来西亚的房地产项目</h1>
+    </header>
+    <main>
+        <section id="home">
+            <div class="overlay">
+                <h2>送您我们的最新房地产报告，了解全马的市场动态，价格和信息。</h2>
+                <button id="downloadButton" class="download-button" onclick="showForm()"></button>
+                <div class="additional-info">
+                    <p>&#9654; 让你不用一个个广告去Sign Up...浪费时间之余，可能还会漏掉一些重要的项目信息</p>
+                    <p>&#9654; 记录完全部新项目的所有资料...让你对KL South (Bukit Jalil/OKR/OUG/Sri Petaling/Kuchai)全部新项目的价格、资料，一目了然，容易货比3家</p>
+                    <p>&#9654; 不管你是想找自住、投资、Upgrade、Downsize、退休等等...只要是想了解KL市场，我相信这一定有你要找的答案</p>
+                </div>
+            </div>
+            <!-- 新增的嵌入YouTube视频 -->
+            <div class="overlay video-overlay">
+                <h2>观看我们的介绍视频，了解更多信息。</h2>
+                <div class="video-container">
+                    <iframe src="source/3sec.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 重复的overlay元素 -->
+            <div class="overlay new-overlay">
+                <h2>下载我们的最新房地产报告，了解市场动态。</h2>
+                <button class="download-button new-download-button" onclick="showForm()"></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <h2>My Social Media</h2>
+            <div class="social-links">
+                <a href="https://youtube.com" target="_blank">
+                    <img src="source/yt.png" alt="YouTube">
+                    Jack
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="source/fb.png" alt="Facebook">
+                    Jackk
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="source/ig.png" alt="Instagram">
+                    Jack
+                </a>
+                <a href="https://tiktok.com" target="_blank">
+                    <img src="source/tt.png" alt="TikTok">
+                    Jack
+                </a>
+                <a href="https://xiaohongshu.com" target="_blank">
+                    <img src="source/xhs.png" alt="XiaoHongShu">
+                    Jack
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Jack 房地产资料下载. 版权所有.</p>
+        </div>
+        
+    </footer>
+
+    <!-- 弹出表单 -->
+    <div id="form-popup" class="form-popup">
+        <form id="infoForm" class="form-container" method="POST" action="submit_to_csv.php">
+            <h2>请填写以下信息以下载PDF</h2>
+            <label for="name"><b>姓名</b></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email"><b>邮箱</b></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone"><b>手机号</b></label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="consent">
+                <input type="checkbox" id="consent" name="consent">
+                我同意将这些信息发送给您，以了解更多的详情。
+            </label>
+
+            <button type="submit" class="btn">提交</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">取消</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

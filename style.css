@@ -1,0 +1,286 @@
+/* styles.css */
+
+/* 基本设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('source/background.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 头部样式 */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* 导航栏样式 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 主要内容样式 */
+main {
+    flex:1; /* 使main部分撑开剩余空间 */
+    padding: 1rem;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.overlay h2 {
+    margin: 0;
+    color: #333;
+}
+
+.download-button {
+    padding: 45px 300px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-image: url('source/download.jpg'); /* 背景图片 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    animation: bounce 1s infinite;
+}
+
+/* 跳动动画 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 新增的嵌入YouTube视频样式 */
+.video-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 新的 overlay 元素样式 */
+.new-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* 新的动画效果 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.new-download-button {
+    padding: 80px 150px;/*15px 25px;*/
+    margin-top: 15px;
+    cursor: pointer;
+    background: url('source/download.jpg'); /* 修改此处为你想要的背景图 */
+    background-size:100%;
+    border: none;
+    background-repeat: no-repeat;
+    animation: shake 1s infinite; /* 新的动画效果 */
+}
+
+@keyframes shake {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-10px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+}
+
+
+/* 弹出表单样式 */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    background-color: rgba(213, 213, 213, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    margin-bottom: 1rem;
+}
+
+.form-container label {
+    margin-bottom: 0.5rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="checkbox"] {
+    width: 95%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.form-container .btn {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-container .btn.submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-container .btn.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+/* 新增描述文字样式 */
+.additional-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.additional-info p {
+    margin: 10px 0;
+}
+
+/* 底部样式 */
+footer {
+    background-color:  rgba(238, 238, 238, 0.7);
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+
+.social-media h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
